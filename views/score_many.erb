@@ -1,0 +1,23 @@
+<h2> Enter words separated by spaces to score them: </h2>
+
+<%= params %>
+
+<% if @scored_words %>
+  <p>
+    The value of the word <%= @scored_words.word1 %> is <%= @scored_words.word1_score %></br>
+    The value of the word <%= @scored_words.word2 %> is <%= @scored_words.word2_score %></br>
+    The value of the word <%= @scored_words.word3 %> is <%= @scored_words.word3_score %></br>
+    The value of the word <%= @scored_words.word4 %> is <%= @scored_words.word4_score %></br>
+    The value of the word <%= @scored_words.word5 %> is <%= @scored_words.word5_score %></br>
+  </p>
+  <% end %>
+
+<form action="" method="post" accept-charset="utf-8">
+  <label>Word 1<input type="text" name="scorewords[word1]" value=""></label>
+  <label>Word 2<input type="text" name="scorewords[word2]" value=""></label>
+  <label>Word 3<input type="text" name="scorewords[word3]" value=""></label>
+  <label>Word 4<input type="text" name="scorewords[word4]" value=""></label>
+  <label>Word 5<input type="text" name="scorewords[word5]" value=""></label>
+
+  <input type="submit" value="Score!">
+</form>

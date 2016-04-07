@@ -1,0 +1,14 @@
+<h2> Enter a word to score: </h2>
+
+<% if @scored_words %>
+  <h3>
+    The value of the word <%= @scored_words.word1 %> is <%= @scored_words.word1_score %>!
+  </h3>
+  <% end %>
+
+<form action="" method="post" accept-charset="utf-8">
+  <label for="username">Word</label>
+  <input type="text" name="scorewords[word1]" value="" id="word1">
+
+  <input type="submit" value="Score!">
+</form>
