@@ -9,8 +9,17 @@
 
   <body>
     <header>
-      <a href="/" class="nodec"><h1>Scrabble Sinatra</h1></a>
+      <a href="/" class="nodec"><h1>Scrabble</h1></a>
       <img src="images/sinatrascrab.png">
+
+      <nav class="menu">
+          <ul>
+            <li><a href="/" class=<%= "main_active" if active_page?("") %>>Home</a></li>
+            <li><a href="score" class=<%= "main_active" if active_page?("score") %>>Score One Word</a></li>
+            <li><a href="how-many" class=<%= "main_active" if active_page?("how-many") || active_page?("score-many")  %>>Score Multiple Words</a></li>
+          </ul>
+        </nav>
+
     </header>
 
     <main>

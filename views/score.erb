@@ -1,14 +1,24 @@
 <h2> Enter a word to score: </h2>
 
-<% if @scored_words %>
+<% if @scored_word %>
   <h3>
-    The value of the word <%= @scored_words.word1 %> is <%= @scored_words.word1_score %>!
+    The value of the word <span class = "word"><%= params["word1"] %></span> is <span class = "word"><%= @scored_word %></span>!
   </h3>
-  <% end %>
+  <h4> Breakdown: </h4>
+  <p>
+    <% @letter_hashes.each do |hash| %>
+      <%= hash[:letter] %>: <%= hash[:value] %><br>
+    <% end %>
+    <% if params["word1"].length == 7 %>
+      <br>Plus 50 extra points for being 7 letters exactly!
+    <% end %>
+  </p>
+
+<% end %>
 
 <form action="" method="post" accept-charset="utf-8">
   <label for="username">Word</label>
-  <input type="text" name="scorewords[word1]" value="" id="word1">
+  <input type="text" pattern="[A-Za-z]+" title="Only letters allowed." name="word1" value="" id="word1">
 
   <input type="submit" value="Score!">
 </form>

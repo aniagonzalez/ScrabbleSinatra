@@ -5,7 +5,7 @@ body {
 
 header {
   background-color: #d04000;
-  padding: 10px;
+  padding: 40px;
 }
 
 
@@ -14,16 +14,67 @@ header img {
   width: 25%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
 }
+
+/***** MENU ******/
+nav.menu {
+  clear:both;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  /*background-color: #ededed;*/
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0;
+  margin-top: 0;
+  display: block;
+}
+
+nav.menu ul {
+  list-style: none;
+  text-align: center;
+}
+nav.menu li {
+  display: inline-block;
+  width: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fef2d4;
+}
+
+
+
+nav.menu li a {
+  color: #fef2d4;
+  text-decoration: none;
+  padding-top: 28px;
+  display: inline-block;
+}
+
+nav.menu li a.main_active {
+  color: #f6c52c;
+}
+/*****************/
 
 h1 {
-  color: white;
+  color: #000;
   text-align: center;
-  font-size: 55px;
+  font-size: 33px;
 }
 
+a {
+  color: #d04000;
+  text-decoration: none;
+}
+
+.word {
+  color: #d04000;
+}
 
 a.nodec {
   text-decoration: none;
